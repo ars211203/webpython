@@ -1,0 +1,17 @@
+{%extends 'app/base.html'%}
+{%block body%}
+<form class="form-inline" method="post" action="{% url 'create' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="formFile" class="form-label">First Name</label>
+        <input class="form-control" type="text" id="firstname" name="firstname" required>
+    </div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">last Name</label>
+        <input class="form-control" type="text" id="lastname" name="lastname" required>
+    </div>
+    <div class="col-auto">
+        <button id="btn-create" type="submit" class="btn btn-primary mb-3">Create</button>
+    </div>
+</form>
+{%endblock%}
